@@ -1,0 +1,65 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "npm install"
+  },
+  "deploy": {
+    "startCommand": "npm start",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}
+```
+
+---
+
+## File 4: `.gitignore`
+
+**Create this file in your `scraper` folder:**
+```
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build files
+dist/
+build/
+```
+
+---
+
+## ✅ Complete Scraper Folder Files
+
+After creating all these, your `scraper` folder should have:
+```
+scraper/
+├── scrapper.js          ✅ YOU ALREADY HAVE (modified)
+├── .env                 ✅ YOU ALREADY HAVE (created)
+├── package.json         ✅ CREATE THIS (code above)
+├── Dockerfile           ✅ CREATE THIS (code above)
+├── railway.json         ✅ CREATE THIS (code above)
+└── .gitignore           ✅ CREATE THIS (code above)
